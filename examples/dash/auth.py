@@ -17,13 +17,15 @@ class User(CfUser):
     pass
 
 
-def login_required(fn):
-    @wraps(fn)
-    def login_check(*args, **kwargs):
-        if not current_user.is_authenticated:
-            return 'Unauthorized!'
-        return fn(*args, **kwargs)
-    return login_check
+def login_required(fail_response='Unauthorized!'):
+    def callable(fn):
+        @wraps(fn)
+        def login_check(*args, **kwargs):
+            if not current_user.is_authenticated:
+                return fail_response
+            return fn(*args, **kwargs)
+        return login_check
+    return callable
 
 
 def group_required(groups=None, fail_response='Unauthorized!'):
