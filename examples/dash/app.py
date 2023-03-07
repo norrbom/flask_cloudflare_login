@@ -70,12 +70,6 @@ def load_user_from_request(request):
     return None
 
 
-# handle un authorized requests, used by login_required
-@login_manager.unauthorized_handler
-def unauthorized_handler():
-    return abort(401, description="Unauthorized")
-
-
 # configure Dash
 app = dash.Dash(
     getenv('APP_NAME'),
