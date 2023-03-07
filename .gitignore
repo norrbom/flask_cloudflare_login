@@ -1,0 +1,18 @@
+# Python
+.bash_history
+.cache/
+.conda/
+.coverage*
+.gitconfig
+.ipython/
+.local/
+.plotly/
+*.pyc
+*.whl
+.pytest_cache*
+.venv/
+.vs/
+.vscode/
+*.ipynb_checkpoints*
+*__pycache__*
+venv*/

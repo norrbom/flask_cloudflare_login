@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "flask_cloudflare"
+version = "0.5.3"
+authors = [
+        { name="Anders Norrbom", email="anders@norrbom.org" },
+]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'flask-caching',
+    'PyJWT',
+    'requests'
+]
