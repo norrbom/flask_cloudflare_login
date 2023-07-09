@@ -1,35 +1,9 @@
 # Flask Cloudflare
 
-Flask Cloudflare provides additional authorization on top of Cloudfare Access by checking if a user is part of a group.
-Groups are fetched from Cloudflare identity API.
+The Flask Cloudflare module provides authorization based on Cloudfare Access JWT token and Cloudflare identity API.
+The module comes with a class `CfUser` that  that can be used as a Flask-Login user class, objects of the CfUser class has a `groups` variable that holds a list of groups the user belongs to.
 
-## Installation
-
-### Create a venv
-
-```sh
-python3 -m venv ./venv
-. ./venv/bin/activate && \
-pip install --upgrade pip build
-deactivate
-```
-
-### Build the package:
-
-```sh
-. ./venv/bin/activate && \
-python -m build --wheel .
-deactivate
-```
-
-### Install the package and dependencies with pip:
-
-```sh
-. ./venv/bin/activate && \
-pip install -r examples/dash/requirements.txt && \
-pip install --no-index --find-links ./dist flask_cloudflare && \
-deactivate
-```
+## Usage example - Dash App
 
 ### Cloudflare Settings
 
@@ -53,8 +27,17 @@ TEST_CF_EMAIL=
 TEST_CF_GROUPS=
 ```
 
-### Run the example Dash App
+### Start the Dash App
 
 ```sh
-sh -c '. ./venv/bin/activate && cd examples/dash && export ENVIRONMENT=local export SECRET_KEY=changeme && python app.py'
+make build run
 ```
+
+## How to contribute?
+
+- clone this repo or pull the latest changes
+- create a new branch feature/\<feature\>
+- run `make test` to auto format code, make sure all tests are passed
+- push the code and create a merge request to main branch
+- get the pull request reviewed and approved, the branch should be removed once merged.
+- create a new git tag version, following semantic versioning praxis MAJOR.MINOR.PATCH
