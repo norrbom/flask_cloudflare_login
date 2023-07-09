@@ -3,10 +3,10 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.hatch.version]
-path = "src/flask_cloudflare/__init__.py"
+path = "src/flask_cloudflare_login/__init__.py"
 
 [project]
-name = "flask_cloudflare"
+name = "flask_cloudflare_login"
 dynamic = [
   "version"
 ]
@@ -21,11 +21,10 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    'cachetools',
-    'PyJWT',
-    'requests'
+    'cachetools==5.3.0',
+    'PyJWT==2.6.0',
+    'requests==2.28.2'
 ]
-
 [tool.hatch.envs.test]
 dependencies = [
     "pytest",
