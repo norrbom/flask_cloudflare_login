@@ -28,7 +28,7 @@ CF_TEST_TOKEN=
 ### Start the Dash App
 
 ```sh
-make build run
+make run
 ```
 
 ## How to contribute?
