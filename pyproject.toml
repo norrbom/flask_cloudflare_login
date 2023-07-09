@@ -5,6 +5,9 @@ build-backend = "hatchling.build"
 [tool.hatch.version]
 path = "src/flask_cloudflare_login/__init__.py"
 
+[project.urls]
+Homepage = "https://github.com/norrbom/flask_cloudflare_login"
+
 [project]
 name = "flask_cloudflare_login"
 dynamic = [
@@ -13,7 +16,9 @@ dynamic = [
 authors = [
         { name="Anders Norrbom", email="anders@norrbom.org" },
 ]
-description = ""
+license = "MIT"
+license_files = "LICENSE"
+description = "Provides Flask-Login user class from Cloudfare Access JWT token and Cloudflare identity API"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
@@ -21,9 +26,9 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    'cachetools==5.3.0',
-    'PyJWT==2.6.0',
-    'requests==2.28.2'
+    'cachetools>=5.3.0',
+    'PyJWT>=2.6.0',
+    'requests>=2.28.2'
 ]
 [tool.hatch.envs.test]
 dependencies = [
