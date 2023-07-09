@@ -9,7 +9,7 @@ import json
 from flask import Flask, request, redirect, jsonify, render_template
 from flask import Response
 from flask_login import logout_user, current_user, LoginManager
-from flask_cloudflare import access
+from flask_cloudflare_login import access
 import dash
 from dash import dcc, html, Input, Output
 

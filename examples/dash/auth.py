@@ -3,7 +3,7 @@ import logging
 from functools import wraps
 from flask_login import AnonymousUserMixin
 from flask_login import current_user
-from flask_cloudflare.access import CfUser
+from flask_cloudflare_login.access import CfUser
 
 
 log = logging.getLogger(getenv("APP_NAME"))

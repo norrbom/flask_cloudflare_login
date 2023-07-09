@@ -32,7 +32,7 @@ def configure_logging():
                 "gunicorn": {"propagate": False, "handlers": ["stdout"]},
                 "gunicorn.access": {"propagate": False, "handlers": ["stdout"]},
                 "gunicorn.error": {"propagate": False, "handlers": ["stdout"]},
-                "flask_cloudflare.access": {
+                "flask_cloudflare_login.access": {
                     "propagate": True,
                 },
                 getenv("APP_NAME"): {

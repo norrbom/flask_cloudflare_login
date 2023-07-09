@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import json
 import pytest
-from flask_cloudflare.access import CfUser
+from flask_cloudflare_login.access import CfUser
 
 
 @pytest.fixture(autouse=True)

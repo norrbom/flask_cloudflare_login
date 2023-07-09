@@ -1,6 +1,6 @@
-# Flask Cloudflare
+# Flask Cloudflare Login
 
-The Flask Cloudflare module provides authorization based on Cloudfare Access JWT token and Cloudflare identity API.
+The Flask Cloudflare Login module provides authorization based on Cloudfare Access JWT token and Cloudflare identity API.
 The module comes with a class `CfUser` that  that can be used as a Flask-Login user class, objects of the CfUser class has a `groups` variable that holds a list of groups the user belongs to.
 
 ## Usage example - Dash App

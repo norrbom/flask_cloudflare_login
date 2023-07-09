@@ -24,9 +24,12 @@ build:
 	hatch version b && \
 	hatch build -t wheel
 
-run:
+install:
+	. ./venv/bin/activate && \
+	pip install --upgrade --force-reinstall --find-links ./dist flask_cloudflare_login
+
+run: install
 	. ./venv/bin/activate && \
 	pip install -r ./examples/dash/requirements.txt && \
-	pip install --upgrade --no-deps --force-reinstall --no-index --find-links ./dist flask_cloudflare && \
 	export export SECRET_KEY=$(SECRET_KEY) && \
 	cd examples/dash && python app.py
