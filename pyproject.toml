@@ -18,7 +18,8 @@ authors = [
 ]
 license = "MIT"
 license_files = "LICENSE"
-description = "Provides Flask-Login user class from Cloudfare Access JWT token and Cloudflare identity API"
+description = "The Flask Cloudflare Login module provides a Flask-Login user class from Cloudfare Access JWT token and Cloudflare identity API"
+long_description = "The Flask Cloudflare Login module provides a Flask-Login user class from Cloudfare Access JWT token and Cloudflare identity API"
 readme = "README.md"
 requires-python = ">=3.8"
 classifiers = [
