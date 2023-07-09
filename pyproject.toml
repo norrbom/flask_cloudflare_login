@@ -2,9 +2,14 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.version]
+path = "src/flask_cloudflare/__init__.py"
+
 [project]
 name = "flask_cloudflare"
-version = "0.5.3"
+dynamic = [
+  "version"
+]
 authors = [
         { name="Anders Norrbom", email="anders@norrbom.org" },
 ]
@@ -16,7 +21,16 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    'flask-caching',
+    'cachetools',
     'PyJWT',
     'requests'
+]
+
+[tool.hatch.envs.test]
+dependencies = [
+    "pytest",
+    "python-dotenv",
+    "flake8",
+    "black",
+    "isort",
 ]
