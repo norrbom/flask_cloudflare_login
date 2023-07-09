@@ -14,3 +14,6 @@ scipy==1.10.0
 python-dotenv==0.21.1
 flask-login==0.6.2
 cryptography==39.0.1
+
+# flask cloudflare login
+flask-cloudflare-login

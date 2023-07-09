@@ -20,15 +20,28 @@ build:
 	rm -fr ./dist
 	python3 -m venv ./venv
 	. ./venv/bin/activate && \
-	pip install --upgrade pip hatch && \
-	hatch version b && \
-	hatch build -t wheel
+	pip install --upgrade pip build && \
+	python -m build
 
 install:
+	python3 -m venv ./venv
 	. ./venv/bin/activate && \
 	pip install --upgrade --force-reinstall --find-links ./dist flask_cloudflare_login
 
-run: install
+publish-test:
+	python3 -m venv ./venv
+	. ./venv/bin/activate && \
+	pip install --upgrade pip twine && \
+	twine upload --repository testpypi dist/*
+
+publish:
+	python3 -m venv ./venv
+	. ./venv/bin/activate && \
+	pip install --upgrade pip twine && \
+	twine upload --repository pypi dist/*
+
+run:
+	python3 -m venv ./venv
 	. ./venv/bin/activate && \
 	pip install -r ./examples/dash/requirements.txt && \
 	export export SECRET_KEY=$(SECRET_KEY) && \

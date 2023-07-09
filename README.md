@@ -1,7 +1,12 @@
 # Flask Cloudflare Login
+The Flask Cloudflare Login module provides a Flask-Login user class from Cloudfare Access JWT token and Cloudflare identity API.
 
-The Flask Cloudflare Login module provides authorization based on Cloudfare Access JWT token and Cloudflare identity API.
-The module comes with a class `CfUser` that  that can be used as a Flask-Login user class, objects of the CfUser class has a `groups` variable that holds a list of groups the user belongs to.
+## Installation
+Flask Cloudflare Login is available from PyPI and can be installed by running:
+
+```sh
+pip install flask-cloudflare-login
+```
 
 ## Usage example - Dash App
 
@@ -18,13 +23,6 @@ In order to make the application work locally you need to set CF_TEST_TOKEN with
 
 ```sh
 CF_TEST_TOKEN=
-```
-
-Or set the email and groups values that is pulled from the token.
-
-```sh
-TEST_CF_EMAIL=
-TEST_CF_GROUPS=
 ```
 
 ### Start the Dash App
